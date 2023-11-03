@@ -212,6 +212,7 @@ main {
 }
 .div-hello h1 {
     color: #fff;
+    text-align: center;
 }
 
 .div-hello-img {
@@ -233,8 +234,8 @@ main {
     text-decoration: none;
 }
 .div-container .div-box {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     /* background-color: #ADC3DB; */
     -webkit-clip-path: polygon(78% 0, 100% 22%, 100% 100%, 50% 100%, 0 100%, 0 0);
     clip-path: polygon(78% 0, 100% 22%, 100% 100%, 50% 100%, 0 100%, 0 0);
@@ -250,7 +251,7 @@ main {
 
 }
 .div-container .div-box img {
-    width: 200px;
+    width: 180px;
 }
 .div-container .div-box p{
     font-size: 24px;
@@ -483,11 +484,11 @@ svg {
     }
 
     .div-container {
-        gap: 12px;
+        gap: 18px;
     }
     .div-container .div-box {
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
         padding: 10px 0px;
         gap: 10px;
     }
@@ -501,10 +502,10 @@ svg {
         text-align: center;
     }
     .div-container .div-box img {
-        width: 90px;
+        width: 80px;
     }
 }
-@media (min-width: 0px) and (max-width: 430px) {
+@media (min-width: 400px) and (max-width: 430px) {
     
     header {
         justify-content: end;
@@ -548,17 +549,82 @@ svg {
 
 
     .div-container {
-        gap: 12px;
+        gap: 18px;
     }
     .div-container .div-box {
-        width: 80px;
-        height: 80px;
-        padding: 10px 0px;
+        width: 96px;
+        height: 88px;
+        padding: 14px 2px;
         gap: 8px;
     }
     .div-container .div-box::after {
         width: 30px;
-        height: 40px;
+        height: 34px;
+    }
+    .div-container .div-box p{
+        font-size: 10px;
+        color: #fff;
+        text-align: center;
+    }
+    .div-container .div-box img {
+        width: 70px;
+    }
+}
+@media (min-width: 0px) and (max-width: 400px) {
+    
+    header {
+        justify-content: end;
+    }
+
+    header .menue {
+        width: 100%;
+        transform: translate(100%,0);
+        display: flex;
+    }
+
+    header .a img {
+        position: absolute;
+        width: 110px;
+        left: 30px;
+        top: 50%;
+        transform: translate(0,-50%);
+    }
+
+    header .midell label i {
+        display: block;
+    }
+
+    header .midell a {
+        display: none;
+    }   
+    .div-container:nth-child(1) {
+        gap: 100px;
+        top: 160PX;
+        flex-direction: column;
+    }
+    .div-container .div-hello-img {
+        width: 260px;
+    }
+    .div-container .div-hello-img img {
+        width: 260px;
+    }
+    .div-container .div-hello {
+        font-size: 14px;
+    }
+
+
+    .div-container {
+        gap: 20px;
+    }
+    .div-container .div-box {
+        width: 86px;
+        height: 78px;
+        padding: 14px 2px;
+        gap: 8px;
+    }
+    .div-container .div-box::after {
+        width: 30px;
+        height: 34px;
     }
     .div-container .div-box p{
         font-size: 10px;

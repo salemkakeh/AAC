@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@600&family=Caprasimo&family=Inter:wght@300;600;900&family=Phudu:wght@800&display=swap');
+* {
+    font-family: 'AR One Sans', sans-serif;
+    font-family: 'Phudu', cursive;
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Inter', sans-serif;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    background: border-box;
+}
+
+body {
+    background-color: #212A3E;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box {
+    width: 400px;
+    height: 360px;
+    border: 2px solid #208dcc;
+    box-shadow: 1px 1px 2px #208dcc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 0px;
+    -webkit-clip-path: polygon(78% 0, 100% 22%, 100% 100%, 50% 100%, 0 100%, 0 0);
+    clip-path: polygon(78% 0, 100% 22%, 100% 100%, 50% 100%, 0 100%, 0 0);
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+
+}
+.box-gap {
+    gap: 24px;
+}
+
+.box::after {
+    content: "";
+    width: 140px;
+    height: 140px;
+    background-color: #212;
+    position: absolute;
+    clip-path: polygon(100% 100%,0 0%,100% 0%);
+    -webkit-clip-path: polygon(100% 100%,0 0%,100% 0%);
+    background-color: #ADC3DB;
+    border: 2px solid #ADC3DB;
+    right: 0;
+    top: 0;
+}
+
+
+.box h2 {
+    color: #ADC3DB;
+    font-size: 32px;
+}
+
+.box .input-box {
+    position: relative;
+    width: 90%;
+    height: 40px;
+}
+
+.box .input-box input {
+    width: 21.3rem;
+    height: 100%;
+    border: none;
+    background-color: #208dcc;
+    outline: none;
+    padding: 0px 10px ;
+    font-size: 16px;
+    color: #fff;
+}
+.box .input-box button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #208dcc;
+    outline: none;
+    padding: 0px 10px ;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.box .input-box button:hover {
+    opacity: 90%;
+}
+.box .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    padding: 3px 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    transition: .2s;
+    pointer-events: none;
+    user-select: none;
+}
+.box .input-box input:focus ~ label,
+.box .input-box input:valid ~ label {
+    transform: translateY(-35px);
+    transition: .2s;
+    background-color: #212A3E;
+    border-radius: 10px;
+
+}
+
+.box .input-box a {
+    color: #208dcc;
+    font-size: 22px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.box .input-box a:hover {
+    text-decoration: underline;
+}
+
+
+@media (min-width: 340px) and (max-width: 480px) {
+    .box {
+        width: 300px;
+        height: 300px;
+        gap: 32px;
+    }
+
+    .box::after {
+        width: 100px;
+        height: 130px;
+    }
+
+    .box h2 {
+        font-size: 22px;
+    }
+
+    .box .input-box input {
+        width: 15.7rem;
+        height: 100%;
+        border: none;
+        background-color: #208dcc;
+        outline: none;
+        padding: 0px 10px ;
+        font-size: 14px;
+        color: #fff;
+    }
+
+
+    .box .input-box label {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        padding: 3px 10px;
+        transform: translateY(-50%);
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        transition: .2s;
+        pointer-events: none;
+        user-select: none;
+    }
+    .box .input-box input:focus ~ label,
+    .box .input-box input:valid ~ label {
+        transform: translateY(-30px);
+        transition: .2s;
+        background-color: #212A3E;
+        border-radius: 10px;
+    
+    }
+    
+    .box .input-box button {
+        font-size: 16px;
+    }
+    .box .input-box a {
+        font-size: 16px;
+    }
+    .box-gap {
+        gap: 22px;
+    }
+    .opacity {
+        opacity: 0;
+        transition: 1s;
+    }
+    
+    .display-none {
+        display: none;
+    }
+}
+@media (min-width: 0) and (max-width: 340px) {
+    .box {
+        width: 250px;
+        height: 300px;
+        gap: 32px;
+    }
+
+    .box::after {
+        width: 80px;
+        height: 110px;
+    }
+
+    .box h2 {
+        font-size: 22px;
+    }
+
+    .box .input-box input {
+        width: 12.9rem;
+        height: 100%;
+        border: none;
+        background-color: #208dcc;
+        outline: none;
+        padding: 0px 10px ;
+        font-size: 14px;
+        color: #fff;
+    }
+    .box .input-box label {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        padding: 3px 10px;
+        transform: translateY(-50%);
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        transition: .2s;
+        pointer-events: none;
+        user-select: none;
+    }
+    .box .input-box input:focus ~ label,
+    .box .input-box input:valid ~ label {
+        transform: translateY(-30px);
+        transition: .2s;
+        background-color: #212A3E;
+        border-radius: 10px;
+    }
+    .box .input-box button {
+        font-size: 16px;
+    }
+    .box .input-box a {
+        font-size: 16px;
+    }
+    .box-gap {
+        gap: 22px;
+    }
+    .opacity {
+        opacity: 0;
+        transition: 1s;
+    }
+    .display-none {
+        display: none;
+    }
+}

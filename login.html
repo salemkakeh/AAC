@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <form action="index.html" autocomplete="off">
+        <div class="box" id="box">
+            <h2>login</h2>
+            <div class="input-box">
+                <input type="email" required autocomplete="off">
+                <label for="">Email</label>
+            </div>
+            <div class="input-box">
+                <input type="password" required autocomplete="off">
+                <label for="">Password</label>
+            </div>
+            <div class="input-box">
+                <button>login</button>
+            </div>
+            <div class="input-box">
+                <a id="sibn-in">Sign up</a>
+            </div>
+        </div>
+    </form>
+
+    <form action="index.html" autocomplete="off">
+        <div class="box box-gap opacity display-none" id="box1">
+            <h2>Sign up</h2>
+            <div class="input-box">
+                <input type="email" required autocomplete="off">
+                <label for="">Email</label>
+            </div>
+            <div class="input-box">
+                <input type="password" required autocomplete="off">
+                <label for="">Password</label>
+            </div>
+            <div class="input-box">
+                <input type="password" required autocomplete="off">
+                <label for="">C-Password</label>
+            </div>
+            <div class="input-box">
+                <button>Sign up</button>
+            </div>
+            <div class="input-box">
+                <a id="login">Login</a>
+            </div>
+        </div>
+    </form>
+    <script>
+        let login = document.getElementById("login");
+        let sibn_in = document.getElementById("sibn-in");
+        let box = document.getElementById("box");
+
+        login.onclick = alter;
+        sibn_in.onclick = alter1;
+
+        function alter (){
+            box1.classList.add("opacity");
+            setTimeout(() => {
+                box1.classList.add("display-none");
+                box.classList.remove("display-none");
+                setTimeout(() => {
+                    box.classList.remove("opacity");
+                }, 500);
+            }, 1000);
+        }
+        function alter1 (){
+            box.classList.add("opacity");
+            setTimeout(() => {
+                box.classList.add("display-none");
+                box1.classList.remove("display-none");
+                setTimeout(() => {
+                    box1.classList.remove("opacity");
+                }, 500);
+            }, 1000);
+
+        }
+    </script>
+</body>
+</html>
