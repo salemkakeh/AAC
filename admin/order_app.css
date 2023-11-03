@@ -1,0 +1,674 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@600&family=Caprasimo&family=Inter:wght@300;600;900&family=Phudu:wght@800&display=swap');
+* {
+    font-family: 'AR One Sans', sans-serif;
+    font-family: 'Phudu', cursive;
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Inter', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    background: border-box;
+}
+
+body {
+    background-color: #212A3E;
+    overflow-x: hidden;
+}
+
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: fixed;
+    background-color: #212A3E;
+    box-shadow: 1px 1px 40px #208dcc8c;
+    border-bottom: 0.5px solid #208dcc;
+    z-index: 111;
+}
+header .a {
+    text-decoration: none;
+}
+header .a img {
+    position: absolute;
+    width: 160px;
+    left: 30px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+header .midell {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+header .midell a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    width: 100px;
+    font-weight: 700;
+    padding: 10px 0px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    /* border: 1px solid #208dcc; */
+}
+header .midell a button {
+    text-decoration: none;
+    text-align: center;
+    color: #ADC3DB;
+    font-size: 20px;
+    width: 80px;
+    font-weight: 700;
+    padding: 10px 0px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+}
+header .midell a::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-color: #208dcc;
+    top: 5px;
+    left: 0;
+    transform: translate(-61px,0);
+    transition: .1s;
+    z-index: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+header .midell a::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-color: #208dcc;
+    top: 5px;
+    right: 0%;
+    transform: translate(80px,0);
+    transition: .1s;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+header .midell a:hover::after {
+    transform: translate(0px,0);
+    transition: .1s;
+}
+header .midell a:hover::before {
+    transform: translate(0px,0);
+    transition: .1s;
+}
+
+header .midell a:hover button {
+    color: #212A3E;
+}
+
+#checkbox {
+    display: none;
+}
+
+header .midell label i {
+    font-size: 40px;
+    color: #ADC3DB;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    display: none;
+}
+
+header .menue {
+    width: 400px;
+    height: 100vh;
+    background-color: #ADC3DB;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    transform: translate(400px,0);
+    transition: 1s;
+    display: flex;
+    align-items: end;
+    /* justify-content: center; */
+    /* padding-top: 100px; */
+    flex-direction: column;
+    gap: 40px;
+    display: none;
+}
+
+header input:checked ~ .menue {
+    transform: translate(0,0);
+    transition: 1s;
+}
+
+header .menue a {
+    padding: 20px 20px;
+    width: 60%;
+    background-color: #208dcc;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    color: #212A3E;
+    text-decoration: none;
+    /* color: #ADC3DB; */
+    font-size: 24px;
+    font-weight: 700;
+}
+header .menue a:nth-child(1) {
+    background-color: #212A3E;
+    border-bottom-left-radius: 60px;
+    text-align: center;
+    border-top-left-radius: 0px;
+}
+header .menue a img {
+    width: 160px;
+    color: #fff;
+}
+
+header .menue a p {
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  header Responsive */
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    
+    header {
+        justify-content: end;
+    }
+    
+    header .midell label i {
+        display: none;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 800px) {
+    
+    header {
+        justify-content: end;
+    }
+
+    header .menue {
+        width: 100%;
+        transform: translate(100%,0);
+        display: flex;
+    }
+
+    header .midell label i {
+        display: block;
+    }
+    
+    header .midell a {
+        display: none;
+        
+    }
+
+}
+
+@media (min-width: 550px) and (max-width: 600px) {
+    
+    header {
+        justify-content: end;
+    }
+
+    header .menue {
+        width: 100%;
+        transform: translate(100%,0);
+        display: flex;
+    }
+
+    header .midell label i {
+        display: block;
+    }
+    
+    header .midell a {
+        display: none;
+        
+    } 
+}
+
+@media (min-width: 430px) and (max-width: 550px) {
+    
+    header {
+        justify-content: end;
+    }
+
+    header .menue {
+        width: 100%;
+        transform: translate(100%,0);
+        display: flex;
+    }
+
+    header .a img {
+        position: absolute;
+        width: 130px;
+        left: 30px;
+        top: 50%;
+        transform: translate(0,-50%);
+    }
+
+    header .midell label i {
+        display: block;
+    }
+    
+    header .midell a {
+        display: none;
+    }   
+}
+
+
+@media (min-width: 400px) and (max-width: 430px) {
+    
+    header {
+        justify-content: end;
+    }
+
+    header .menue {
+        width: 100%;
+        transform: translate(100%,0);
+        display: flex;
+    }
+
+    header .a img {
+        position: absolute;
+        width: 110px;
+        left: 30px;
+        top: 50%;
+        transform: translate(0,-50%);
+    }
+
+    header .midell label i {
+        display: block;
+    }
+
+    header .midell a {
+        display: none;
+    }   
+
+}
+
+
+@media (min-width: 0px) and (max-width: 400px) {
+    
+    header {
+        justify-content: end;
+    }
+
+    header .menue {
+        width: 100%;
+        transform: translate(100%,0);
+        display: flex;
+    }
+
+    header .a img {
+        position: absolute;
+        width: 110px;
+        left: 30px;
+        top: 50%;
+        transform: translate(0,-50%);
+    }
+
+    header .midell label i {
+        display: block;
+    }
+
+    header .midell a {
+        display: none;
+    }   
+    
+}
+
+    /*--------------- header Responsive --------------- */
+
+
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        gap: 40px;
+        padding: 40px;
+        padding-top: 150px;
+    }
+    .container_order {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 200px;
+    }
+
+    .image_order {
+        width: 400px;
+        position: relative;
+        border: 2px solid #208dcc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .image_order img {
+        width: 300px;
+    }
+
+    .daitails_order {
+        width: 500px;
+        height: 400px;
+        border: 2px solid #208dcc;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        padding-top: 20px;
+    }
+    .daitails_order h2 {
+        color: #fff;
+    }
+    .daitails_order p {
+        width: 100%;
+        position: relative;
+    }
+    .daitails_order input {
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        background-color: #208dcc;
+        border: none;
+    }
+    .daitails_order p {
+        color: #fff;
+        font-size: 24px;
+    }
+    .daitails_order button {
+        width: 50%;
+        height: 40px;
+        background-color: #208dcc;
+        font-size: 24px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    #Reject {
+        background-color: red;
+    }
+    .daitails_order button:hover {
+        opacity: 80%;
+    }
+
+    @media (min-width: 550px) and (max-width: 800px) { 
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            gap: 40px;
+            padding: 40px;
+            padding-top: 150px;
+        }
+        .container_order {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 100px;
+        }
+    
+        .image_order {
+            width: 300px;
+            position: relative;
+            border: 2px solid #208dcc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+    
+        .image_order img {
+            width: 200px;
+        }
+    
+        .daitails_order {
+            width: 400px;
+            height: 400px;
+            border: 2px solid #208dcc;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            flex-direction: column;
+            gap: 40px;
+            padding: 20px;
+            padding-top: 20px;
+        }
+        .daitails_order h2 {
+            color: #fff;
+        }
+        .daitails_order p {
+            width: 100%;
+            position: relative;
+        }
+        .daitails_order input {
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            background-color: #208dcc;
+            border: none;
+        }
+        .daitails_order p {
+            color: #fff;
+            font-size: 24px;
+        }
+        .daitails_order button {
+            width: 50%;
+            height: 40px;
+            background-color: #208dcc;
+            font-size: 24px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        #Reject {
+            background-color: red;
+        }
+        .daitails_order button:hover {
+            opacity: 80%;
+        }
+    }
+    @media (min-width: 400px) and (max-width: 550px) { 
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            gap: 40px;
+            padding: 40px;
+            padding-top: 150px;
+        }
+        .container_order {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 100px;
+        }
+    
+        .image_order {
+            width: 280px;
+            position: relative;
+            border: 2px solid #208dcc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+    
+        .image_order img {
+            width: 200px;
+        }
+    
+        .daitails_order {
+            width: 300px;
+            height: 400px;
+            border: 2px solid #208dcc;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            flex-direction: column;
+            gap: 40px;
+            padding: 20px;
+            padding-top: 20px;
+        }
+        .daitails_order h2 {
+            color: #fff;
+            font-size: 16px;
+        }
+        .daitails_order p {
+            width: 100%;
+            position: relative;
+        }
+        .daitails_order input {
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            background-color: #208dcc;
+            border: none;
+        }
+        .daitails_order p {
+            color: #fff;
+            font-size: 16px;
+        }
+        .daitails_order button {
+            width: 50%;
+            height: 40px;
+            background-color: #208dcc;
+            font-size: 20px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        #Reject {
+            background-color: red;
+        }
+        .daitails_order button:hover {
+            opacity: 80%;
+        }
+    }
+    @media (min-width: 0px) and (max-width: 400px) { 
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            gap: 40px;
+            padding: 40px;
+            padding-top: 150px;
+        }
+        .container_order {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 100px;
+        }
+    
+        .image_order {
+            width: 200px;
+            position: relative;
+            border: 2px solid #208dcc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+    
+        .image_order img {
+            width: 200px;
+        }
+    
+        .daitails_order {
+            width: 200px;
+            height: 400px;
+            border: 2px solid #208dcc;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            flex-direction: column;
+            gap: 40px;
+            padding: 20px;
+            padding-top: 20px;
+        }
+        .daitails_order h2 {
+            color: #fff;
+            font-size: 16px;
+        }
+        .daitails_order p {
+            width: 100%;
+            position: relative;
+        }
+        .daitails_order input {
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            background-color: #208dcc;
+            border: none;
+        }
+        .daitails_order p {
+            color: #fff;
+            font-size: 16px;
+        }
+        .daitails_order button {
+            width: 50%;
+            height: 40px;
+            background-color: #208dcc;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        #Reject {
+            background-color: red;
+        }
+        .daitails_order button:hover {
+            opacity: 80%;
+        }
+    }
