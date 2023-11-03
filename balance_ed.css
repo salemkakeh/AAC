@@ -511,6 +511,11 @@ main h1 {
         border: 1px solid #ADC3DB;
         transition: .2s;
     }
+    .box-payment:hover::after {
+        background-color: #208dcc;
+        border: 1px solid #208dcc;
+        transition: .2s;
+    }
     .box-payment img {
         width: 60px;
     }
