@@ -13,6 +13,18 @@
     background: border-box;
 }
 
+
+
+html::-webkit-scrollbar{
+    width: 10px;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: #208dcc;
+}
+html::-webkit-scrollbar-track{
+    background-color: #ADC3DB;
+}
+
 body {
     background-color: #212A3E;
     overflow-x: hidden;

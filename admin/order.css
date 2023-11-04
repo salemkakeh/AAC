@@ -144,7 +144,7 @@ header .menue {
     /* justify-content: center; */
     /* padding-top: 100px; */
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     display: none;
 }
 
@@ -154,7 +154,7 @@ header input:checked ~ .menue {
 }
 
 header .menue a {
-    padding: 20px 20px;
+    padding: 10px 20px;
     width: 60%;
     background-color: #208dcc;
     border-bottom-left-radius: 30px;
